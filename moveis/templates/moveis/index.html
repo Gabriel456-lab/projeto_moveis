@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CasaBela - Catálogo de Móveis</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <div style="padding: 20px; font-family: Arial, sans-serif;">
+        <h1>Catálogo de Móveis - CasaBela</h1>
+        
+        <!-- Imagem gerada -->
+        <div style="margin: 20px 0;">
+            <img src="{% static 'images/loja.jpg' %}" alt="Loja CasaBela" width="500" style="border-radius: 8px;">
+        </div>
+
+        <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+            <tr style="background-color: #f2f2f2;">
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+                <th>Material</th>
+            </tr>
+            {% for movel in moveis %}
+            <tr>
+                <!-- Link dinâmico para os detalhes -->
+                <td><a href="{% url 'detalhe' movel.id %}">{{ movel.nome }}</a></td>
+                <td>R$ {{ movel.preco }}</td>
+                <td>{{ movel.estoque }}</td>
+                <td>{{ movel.material }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4" style="text-align: center;">Nenhum móvel cadastrado ainda. Vá ao painel administrativo para adicionar os itens.</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <br>
+        <button onclick="mostrarMensagem()" style="padding: 10px 15px; cursor: pointer;">Aviso Importante</button>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

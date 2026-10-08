@@ -7,6 +7,14 @@ Um sistema web desenvolvido para a loja **CasaBela**, com foco na apresentação
 
 ---
 
+Grupo:
+-Gabriel Andrade: 01803645
+-Marcus Vinícius: 01813459
+-Mayara: 
+-Irlania Felix:
+-Micaías Alexandre:
+-Welson Dias:
+
 ## Funcionalidades
 
 - [x] **Catálogo Geral:** Listagem de móveis com filtro e suporte a imagens/thumbnails.

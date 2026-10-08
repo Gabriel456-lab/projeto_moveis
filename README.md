@@ -12,8 +12,8 @@ Grupo:
 - Marcus Vinícius: 01813459
 - Mayara Rayanne: 01852552
 - Irlania Felix: 01808910
-- Micaías Alexandre: 
-- Welson Dias: 
+- Micaías Alexandre: 01825976
+- Welson Dias: 01809689
 
 ## Funcionalidades
 
